@@ -7,14 +7,14 @@ server:
   shutdown: graceful
 
 spring:
-  datasource:
-    schema: classpath*:db/mysql/schema.sql
-    data: classpath*:db/mysql/data.sql
+#  datasource:
+#    schema: classpath*:db/mysql/schema.sql
+#    data: classpath*:db/mysql/data.sql
     # DATABASE INFO IS PASSED AS ENVIRONMENT VARIABLES
     # url: jdbc:mysql://localhost:3306/petclinic?useSSL=false
     # username: root
     # password: petclinic
-    initialization-mode: ALWAYS
+#    initialization-mode: ALWAYS
   sleuth:
     sampler:
       probability: 1.0
@@ -24,10 +24,10 @@ spring:
       allow-override: true
       # Override configuration with any local property source
       override-none: true
-  jpa:
-    open-in-view: false
-    hibernate:
-      ddl-auto: none
+#  jpa:
+#    open-in-view: false
+#    hibernate:
+#      ddl-auto: none
 
 # Spring Boot 1.5 makes actuator secure by default
 management.security.enabled: false
