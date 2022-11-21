@@ -10,4 +10,12 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      
+spring:
+  config:
+    activate:
+      on-profile: k8s
+eureka:
+  instance:
+    hostname: spring-petclinic-discovery-server
 
